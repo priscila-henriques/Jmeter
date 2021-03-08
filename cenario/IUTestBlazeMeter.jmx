@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="teleport_teste" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.2.3.17. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">www.teleport.com.br</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_2" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_2</stringProp>
+            <stringProp name="Argument.value">produto.teleport.com.br</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain"></stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+        <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+        <collectionProp name="AuthManager.auth_list"/>
+        <boolProp name="AuthManager.controlledByThreadGroup">false</boolProp>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+        <boolProp name="CacheManager.controlledByThread">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">0</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Test" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.teleport.com.br/0" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="IW_SessionID_" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">IW_SessionID_</stringProp>
+                  <stringProp name="Argument.value">0oap2ru1yqo0bd1ejcfip1uv78xc</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="IW_height" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">IW_height</stringProp>
+                  <stringProp name="Argument.value">595</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="IW_width" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">IW_width</stringProp>
+                  <stringProp name="Argument.value">1336</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="IW_TrackID_" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">IW_TrackID_</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">0</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">0.0</stringProp>
+              <stringProp name="ConstantTimer.delay">0</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 0 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://produto.teleport.com.br/guiame/v1/gql" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;query&quot;:&quot;\nmutation Save($guide: GuideInput!, $id: ID) {\n  save(guide: $guide, id: $id) {\n    _id\n  }\n}\n\nmutation Rm($id: ID!) {\n  rm(id: $id)\n}\n\nmutation Order($guides: [GuideOrderInput]!){\n  order(guides: $guides){\n    _id\n  }\n}\n\nquery List($pageID: String!) {\n  list(pageID: $pageID) {\n    _id\n\t\tpageID\n    title\n    elementOpen\n    elementClose\n    elementCloseTwo\n\t\telementClass\n\t\tzIndexFactor\n    article {\n      id\n      body\n    }\n    rect {\n      x\n      y\n      width\n      height\n    }\n    order\n  }\n}\n\nquery ListAdmin($pageID: String!) {\n\tlist(pageID: $pageID) {\n\t\t_id\n\t\torder\n\t}\n}\n\nquery Article($id: ID) {\n\tarticle(id: $id) {\n    id\n    body\n  }\n}\n&quot;,&quot;variables&quot;:{&quot;pageID&quot;:&quot;FMenu&quot;},&quot;operationName&quot;:&quot;List&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">guiame/v1/gql</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="authorization" elementType="Header">
+                  <stringProp name="Header.name">authorization</stringProp>
+                  <stringProp name="Header.value">Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJkYXRhIjp7ImlkIjoxMDE4MjczLCJuYW1lIjoiUHJpc2NpbGFIZW5yaXF1ZXNSaWJlaXJvIiwiZW1wcmVzYSI6OCwiY29ycmV0b3JhIjoxLCJ1bmlkYWRlIjoxfSwiYXVkIjoiY2hhdDp0ZWxlcG9ydCIsImlzcyI6Imh0dHBzOi8vd3d3LnRlbGVwb3J0LmNvbS5iciIsImV4cCI6MTYxNDcxNjgwOSwiaWF0IjoxNjE0NTQ0MDA5fQ.-5GX0KIEBWpN296mMbyt_B7H8_i3FY26_0NwkKcXjLRDd3jzJ2DLv1jyG6qXhSQ3U1QLdBxPBL1F8svWAGOk3A</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.teleport.com.br/?origem=logout" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="origem" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">origem</stringProp>
+                  <stringProp name="Argument.value">logout</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path"></stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">-3814.0</stringProp>
+              <stringProp name="ConstantTimer.delay">-1907</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was -3814 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.teleport.com.br/cdn-cgi/beacon/performance?req_id=628ce24c4b23f6ec" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;memory&quot;:{&quot;totalJSHeapSize&quot;:23549864,&quot;usedJSHeapSize&quot;:18508396,&quot;jsHeapSizeLimit&quot;:2172649472},&quot;resources&quot;:[{&quot;n&quot;:&quot;https://img.teleportweb.com.br/img/assets/js/jquery.min-teste.js&quot;,&quot;s&quot;:90.46,&quot;d&quot;:48.455,&quot;i&quot;:&quot;script&quot;,&quot;p&quot;:&quot;h2&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:90.46,&quot;ds&quot;:0,&quot;de&quot;:0,&quot;cs&quot;:0,&quot;ce&quot;:0,&quot;qs&quot;:0,&quot;ps&quot;:0,&quot;pe&quot;:138.915,&quot;ws&quot;:0,&quot;ss&quot;:0,&quot;ts&quot;:0,&quot;ec&quot;:0,&quot;dc&quot;:0},{&quot;n&quot;:&quot;https://img.teleportweb.com.br/css/cssBranco1.css&quot;,&quot;s&quot;:90.81,&quot;d&quot;:26.57,&quot;i&quot;:&quot;link&quot;,&quot;p&quot;:&quot;h2&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:90.81,&quot;ds&quot;:0,&quot;de&quot;:0,&quot;cs&quot;:0,&quot;ce&quot;:0,&quot;qs&quot;:0,&quot;ps&quot;:0,&quot;pe&quot;:117.38,&quot;ws&quot;:0,&quot;ss&quot;:0,&quot;ts&quot;:0,&quot;ec&quot;:0,&quot;dc&quot;:0},{&quot;n&quot;:&quot;https://www.teleport.com.br/js/IWCommon.js_10.0.23&quot;,&quot;s&quot;:91.045,&quot;d&quot;:70.47,&quot;i&quot;:&quot;script&quot;,&quot;p&quot;:&quot;h3-29&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:91.045,&quot;ds&quot;:91.045,&quot;de&quot;:91.045,&quot;cs&quot;:91.045,&quot;ce&quot;:91.045,&quot;qs&quot;:96.445,&quot;ps&quot;:160.4,&quot;pe&quot;:161.515,&quot;ws&quot;:0,&quot;ss&quot;:91.045,&quot;ts&quot;:6292,&quot;ec&quot;:5781,&quot;dc&quot;:24129},{&quot;n&quot;:&quot;https://www.teleport.com.br/js/IWCL.js_10.0.23&quot;,&quot;s&quot;:91.25,&quot;d&quot;:54.405,&quot;i&quot;:&quot;script&quot;,&quot;p&quot;:&quot;h3-29&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:91.25,&quot;ds&quot;:91.25,&quot;de&quot;:91.25,&quot;cs&quot;:91.25,&quot;ce&quot;:91.25,&quot;qs&quot;:96.715,&quot;ps&quot;:144.745,&quot;pe&quot;:145.655,&quot;ws&quot;:0,&quot;ss&quot;:91.25,&quot;ts&quot;:5356,&quot;ec&quot;:4845,&quot;dc&quot;:24048},{&quot;n&quot;:&quot;https://www.teleport.com.br/js/IWAjax.js_10.0.23&quot;,&quot;s&quot;:91.43,&quot;d&quot;:49.395,&quot;i&quot;:&quot;script&quot;,&quot;p&quot;:&quot;h3-29&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:91.43,&quot;ds&quot;:91.43,&quot;de&quot;:91.43,&quot;cs&quot;:91.43,&quot;ce&quot;:91.43,&quot;qs&quot;:96.99,&quot;ps&quot;:139.32,&quot;pe&quot;:140.825,&quot;ws&quot;:0,&quot;ss&quot;:91.43,&quot;ts&quot;:6672,&quot;ec&quot;:6161,&quot;dc&quot;:28727},{&quot;n&quot;:&quot;https://www.teleport.com.br/js/IWGecko.js_10.0.23&quot;,&quot;s&quot;:91.615,&quot;d&quot;:48.455,&quot;i&quot;:&quot;script&quot;,&quot;p&quot;:&quot;h3-29&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:91.615,&quot;ds&quot;:91.615,&quot;de&quot;:91.615,&quot;cs&quot;:91.615,&quot;ce&quot;:91.615,&quot;qs&quot;:97.2,&quot;ps&quot;:138.01,&quot;pe&quot;:140.07,&quot;ws&quot;:0,&quot;ss&quot;:91.615,&quot;ts&quot;:2325,&quot;ec&quot;:1814,&quot;dc&quot;:6113},{&quot;n&quot;:&quot;https://www.teleport.com.br/js/IWPreScript.js_10.0.23&quot;,&quot;s&quot;:91.81,&quot;d&quot;:41.6,&quot;i&quot;:&quot;script&quot;,&quot;p&quot;:&quot;h3-29&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:91.81,&quot;ds&quot;:91.81,&quot;de&quot;:91.81,&quot;cs&quot;:91.81,&quot;ce&quot;:91.81,&quot;qs&quot;:97.39,&quot;ps&quot;:132.285,&quot;pe&quot;:133.41,&quot;ws&quot;:0,&quot;ss&quot;:91.81,&quot;ts&quot;:1352,&quot;ec&quot;:841,&quot;dc&quot;:2468},{&quot;n&quot;:&quot;https://img.teleportweb.com.br/img/telaLogin-logotex_tp.png&quot;,&quot;s&quot;:92.015,&quot;d&quot;:83.295,&quot;i&quot;:&quot;img&quot;,&quot;p&quot;:&quot;h3-29&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:92.015,&quot;ds&quot;:0,&quot;de&quot;:0,&quot;cs&quot;:0,&quot;ce&quot;:0,&quot;qs&quot;:0,&quot;ps&quot;:0,&quot;pe&quot;:175.31,&quot;ws&quot;:0,&quot;ss&quot;:0,&quot;ts&quot;:0,&quot;ec&quot;:0,&quot;dc&quot;:0},{&quot;n&quot;:&quot;https://img.teleportweb.com.br/img/Timeout_fecha.png&quot;,&quot;s&quot;:92.07,&quot;d&quot;:82.895,&quot;i&quot;:&quot;img&quot;,&quot;p&quot;:&quot;h3-29&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:92.07,&quot;ds&quot;:0,&quot;de&quot;:0,&quot;cs&quot;:0,&quot;ce&quot;:0,&quot;qs&quot;:0,&quot;ps&quot;:0,&quot;pe&quot;:174.965,&quot;ws&quot;:0,&quot;ss&quot;:0,&quot;ts&quot;:0,&quot;ec&quot;:0,&quot;dc&quot;:0},{&quot;n&quot;:&quot;https://img.teleportweb.com.br/img/ImagensLogin/teleport_logo_login.svg&quot;,&quot;s&quot;:92.11,&quot;d&quot;:118.67,&quot;i&quot;:&quot;img&quot;,&quot;p&quot;:&quot;h3-29&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:92.11,&quot;ds&quot;:0,&quot;de&quot;:0,&quot;cs&quot;:0,&quot;ce&quot;:0,&quot;qs&quot;:0,&quot;ps&quot;:0,&quot;pe&quot;:210.78,&quot;ws&quot;:0,&quot;ss&quot;:0,&quot;ts&quot;:0,&quot;ec&quot;:0,&quot;dc&quot;:0},{&quot;n&quot;:&quot;https://img.teleportweb.com.br/img/telaLogin_LogoTeleport_tp.png&quot;,&quot;s&quot;:92.16,&quot;d&quot;:125.475,&quot;i&quot;:&quot;img&quot;,&quot;p&quot;:&quot;h3-29&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:92.16,&quot;ds&quot;:0,&quot;de&quot;:0,&quot;cs&quot;:0,&quot;ce&quot;:0,&quot;qs&quot;:0,&quot;ps&quot;:0,&quot;pe&quot;:217.635,&quot;ws&quot;:0,&quot;ss&quot;:0,&quot;ts&quot;:0,&quot;ec&quot;:0,&quot;dc&quot;:0},{&quot;n&quot;:&quot;https://img.teleportweb.com.br/img/ImagensLogin/tp_icon_login_user.svg&quot;,&quot;s&quot;:92.195,&quot;d&quot;:86.485,&quot;i&quot;:&quot;img&quot;,&quot;p&quot;:&quot;h3-29&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:92.195,&quot;ds&quot;:0,&quot;de&quot;:0,&quot;cs&quot;:0,&quot;ce&quot;:0,&quot;qs&quot;:0,&quot;ps&quot;:0,&quot;pe&quot;:178.68,&quot;ws&quot;:0,&quot;ss&quot;:0,&quot;ts&quot;:0,&quot;ec&quot;:0,&quot;dc&quot;:0},{&quot;n&quot;:&quot;https://img.teleportweb.com.br/img/ImagensLogin/tp_icon_login_senha.svg&quot;,&quot;s&quot;:92.24,&quot;d&quot;:125.145,&quot;i&quot;:&quot;img&quot;,&quot;p&quot;:&quot;h3-29&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:92.24,&quot;ds&quot;:0,&quot;de&quot;:0,&quot;cs&quot;:0,&quot;ce&quot;:0,&quot;qs&quot;:0,&quot;ps&quot;:0,&quot;pe&quot;:217.385,&quot;ws&quot;:0,&quot;ss&quot;:0,&quot;ts&quot;:0,&quot;ec&quot;:0,&quot;dc&quot;:0},{&quot;n&quot;:&quot;https://img.teleportweb.com.br/img/teleport-instagram.png&quot;,&quot;s&quot;:92.27,&quot;d&quot;:125.59,&quot;i&quot;:&quot;img&quot;,&quot;p&quot;:&quot;h3-29&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:92.27,&quot;ds&quot;:0,&quot;de&quot;:0,&quot;cs&quot;:0,&quot;ce&quot;:0,&quot;qs&quot;:0,&quot;ps&quot;:0,&quot;pe&quot;:217.86,&quot;ws&quot;:0,&quot;ss&quot;:0,&quot;ts&quot;:0,&quot;ec&quot;:0,&quot;dc&quot;:0},{&quot;n&quot;:&quot;https://img.teleportweb.com.br/img/teleport-linkedin.png&quot;,&quot;s&quot;:92.325,&quot;d&quot;:125.93,&quot;i&quot;:&quot;img&quot;,&quot;p&quot;:&quot;h3-29&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:92.325,&quot;ds&quot;:0,&quot;de&quot;:0,&quot;cs&quot;:0,&quot;ce&quot;:0,&quot;qs&quot;:0,&quot;ps&quot;:0,&quot;pe&quot;:218.255,&quot;ws&quot;:0,&quot;ss&quot;:0,&quot;ts&quot;:0,&quot;ec&quot;:0,&quot;dc&quot;:0},{&quot;n&quot;:&quot;https://img.teleportweb.com.br/img/teleport-facebook.png&quot;,&quot;s&quot;:92.375,&quot;d&quot;:125.695,&quot;i&quot;:&quot;img&quot;,&quot;p&quot;:&quot;h3-29&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:92.375,&quot;ds&quot;:0,&quot;de&quot;:0,&quot;cs&quot;:0,&quot;ce&quot;:0,&quot;qs&quot;:0,&quot;ps&quot;:0,&quot;pe&quot;:218.07,&quot;ws&quot;:0,&quot;ss&quot;:0,&quot;ts&quot;:0,&quot;ec&quot;:0,&quot;dc&quot;:0},{&quot;n&quot;:&quot;https://api.siteblindado.com/v1/seal/aw/www.teleport.com.br/seal.png&quot;,&quot;s&quot;:92.425,&quot;d&quot;:84.91,&quot;i&quot;:&quot;img&quot;,&quot;p&quot;:&quot;h2&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:92.425,&quot;ds&quot;:0,&quot;de&quot;:0,&quot;cs&quot;:0,&quot;ce&quot;:0,&quot;qs&quot;:0,&quot;ps&quot;:0,&quot;pe&quot;:177.335,&quot;ws&quot;:0,&quot;ss&quot;:0,&quot;ts&quot;:0,&quot;ec&quot;:0,&quot;dc&quot;:0},{&quot;n&quot;:&quot;https://selo.siteblindado.com/aw.js&quot;,&quot;s&quot;:92.46,&quot;d&quot;:202.975,&quot;i&quot;:&quot;script&quot;,&quot;p&quot;:&quot;http/1.1&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:92.46,&quot;ds&quot;:0,&quot;de&quot;:0,&quot;cs&quot;:0,&quot;ce&quot;:0,&quot;qs&quot;:0,&quot;ps&quot;:0,&quot;pe&quot;:295.435,&quot;ws&quot;:0,&quot;ss&quot;:0,&quot;ts&quot;:0,&quot;ec&quot;:0,&quot;dc&quot;:0},{&quot;n&quot;:&quot;https://static.cloudflareinsights.com/beacon.min.js&quot;,&quot;s&quot;:92.5,&quot;d&quot;:124.59,&quot;i&quot;:&quot;script&quot;,&quot;p&quot;:&quot;h2&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:92.5,&quot;ds&quot;:0,&quot;de&quot;:0,&quot;cs&quot;:0,&quot;ce&quot;:0,&quot;qs&quot;:0,&quot;ps&quot;:0,&quot;pe&quot;:217.09,&quot;ws&quot;:0,&quot;ss&quot;:0,&quot;ts&quot;:0,&quot;ec&quot;:0,&quot;dc&quot;:0},{&quot;n&quot;:&quot;https://www.google-analytics.com/analytics.js&quot;,&quot;s&quot;:152.02,&quot;d&quot;:64.765,&quot;i&quot;:&quot;script&quot;,&quot;p&quot;:&quot;h2&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:152.02,&quot;ds&quot;:0,&quot;de&quot;:0,&quot;cs&quot;:0,&quot;ce&quot;:0,&quot;qs&quot;:0,&quot;ps&quot;:0,&quot;pe&quot;:216.785,&quot;ws&quot;:0,&quot;ss&quot;:0,&quot;ts&quot;:0,&quot;ec&quot;:0,&quot;dc&quot;:0},{&quot;n&quot;:&quot;https://img.teleportweb.com.br/img/ImagensLogin/background_teleport_1.jpg&quot;,&quot;s&quot;:155.23,&quot;d&quot;:121.59,&quot;i&quot;:&quot;css&quot;,&quot;p&quot;:&quot;h3-29&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:155.23,&quot;ds&quot;:0,&quot;de&quot;:0,&quot;cs&quot;:0,&quot;ce&quot;:0,&quot;qs&quot;:0,&quot;ps&quot;:0,&quot;pe&quot;:276.82,&quot;ws&quot;:0,&quot;ss&quot;:0,&quot;ts&quot;:0,&quot;ec&quot;:0,&quot;dc&quot;:0},{&quot;n&quot;:&quot;https://www.teleport.com.br/gfx/loading.gif&quot;,&quot;s&quot;:171.91,&quot;d&quot;:61.745,&quot;i&quot;:&quot;css&quot;,&quot;p&quot;:&quot;h3-29&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:171.91,&quot;ds&quot;:171.91,&quot;de&quot;:171.91,&quot;cs&quot;:171.91,&quot;ce&quot;:171.91,&quot;qs&quot;:173.86,&quot;ps&quot;:232.775,&quot;pe&quot;:233.655,&quot;ws&quot;:0,&quot;ss&quot;:171.91,&quot;ts&quot;:3251,&quot;ec&quot;:2767,&quot;dc&quot;:2767},{&quot;n&quot;:&quot;https://www.google-analytics.com/j/collect?v=1&amp;_v=j88&amp;a=1046575443&amp;t=pageview&amp;_s=1&amp;dl=https%3A%2F%2Fwww.teleport.com.br%2F0&amp;ul=pt-br&amp;de=UTF-8&amp;dt=TELEPORT%20-%20entrar&amp;sd=24-bit&amp;sr=1366x768&amp;vp=1366x625&amp;je=0&amp;_u=AACAAAABAAAAAC~&amp;jid=&amp;gjid=&amp;cid=1663043570.1614543779&amp;tid=UA-6294602-2&amp;_gid=1886620212.1614543779&amp;_slc=1&amp;z=2017929592&quot;,&quot;s&quot;:243.18,&quot;d&quot;:64.615,&quot;i&quot;:&quot;xmlhttprequest&quot;,&quot;p&quot;:&quot;h3-29&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:243.18,&quot;ds&quot;:0,&quot;de&quot;:0,&quot;cs&quot;:0,&quot;ce&quot;:0,&quot;qs&quot;:0,&quot;ps&quot;:0,&quot;pe&quot;:307.795,&quot;ws&quot;:0,&quot;ss&quot;:0,&quot;ts&quot;:0,&quot;ec&quot;:0,&quot;dc&quot;:0},{&quot;n&quot;:&quot;https://seal.siteblindado.com.br/www.teleport.com.br/info&quot;,&quot;s&quot;:296.78,&quot;d&quot;:22.66,&quot;i&quot;:&quot;fetch&quot;,&quot;p&quot;:&quot;h2&quot;,&quot;rs&quot;:0,&quot;re&quot;:0,&quot;fs&quot;:296.78,&quot;ds&quot;:0,&quot;de&quot;:0,&quot;cs&quot;:0,&quot;ce&quot;:0,&quot;qs&quot;:0,&quot;ps&quot;:0,&quot;pe&quot;:319.44,&quot;ws&quot;:0,&quot;ss&quot;:0,&quot;ts&quot;:0,&quot;ec&quot;:0,&quot;dc&quot;:0}],&quot;redirectCount&quot;:0,&quot;referrer&quot;:&quot;https://www.teleport.com.br/&quot;,&quot;documentWriteIntervention&quot;:false,&quot;errorCount&quot;:0,&quot;eventType&quot;:1,&quot;firstPaint&quot;:175.62999995425344,&quot;firstContentfulPaint&quot;:175.62999995425344,&quot;largestContentfulPaint&quot;:178.139,&quot;firstInputDelay&quot;:-1,&quot;cumulativeLayoutShift&quot;:0.005006718218436018,&quot;si&quot;:10,&quot;startTime&quot;:1614544022625.267,&quot;versions&quot;:{&quot;fl&quot;:&quot;2021.2.0&quot;,&quot;js&quot;:&quot;2021.2.1&quot;,&quot;timings&quot;:2},&quot;pageloadId&quot;:&quot;f9827a8a-160b-4215-8e6f-7a8801b96e2a&quot;,&quot;location&quot;:&quot;https://www.teleport.com.br/0&quot;,&quot;timingsV2&quot;:{&quot;unloadEventStart&quot;:76.92999998107553,&quot;unloadEventEnd&quot;:76.92999998107553,&quot;domInteractive&quot;:297.77499998454005,&quot;domContentLoadedEventStart&quot;:301.19999998714775,&quot;domContentLoadedEventEnd&quot;:304.3750000069849,&quot;domComplete&quot;:333.3499999716878,&quot;loadEventStart&quot;:333.45499995630234,&quot;loadEventEnd&quot;:338.51999999023974,&quot;type&quot;:&quot;navigate&quot;,&quot;redirectCount&quot;:0,&quot;initiatorType&quot;:&quot;navigation&quot;,&quot;nextHopProtocol&quot;:&quot;h3-29&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:2.4299999931827188,&quot;domainLookupStart&quot;:2.4299999931827188,&quot;domainLookupEnd&quot;:2.4299999931827188,&quot;connectStart&quot;:2.4299999931827188,&quot;connectEnd&quot;:2.4299999931827188,&quot;secureConnectionStart&quot;:2.4299999931827188,&quot;requestStart&quot;:8.165000006556511,&quot;responseStart&quot;:72.35999999102205,&quot;responseEnd&quot;:73.66499997442588,&quot;transferSize&quot;:9889,&quot;encodedBodySize&quot;:9434,&quot;decodedBodySize&quot;:45147,&quot;name&quot;:&quot;https://www.teleport.com.br/0&quot;,&quot;entryType&quot;:&quot;navigation&quot;,&quot;startTime&quot;:0,&quot;duration&quot;:338.51999999023974},&quot;st&quot;:2}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">cdn-cgi/beacon/performance?req_id=628ce24c4b23f6ec</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="content-type" elementType="Header">
+                  <stringProp name="Header.name">content-type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.teleport.com.br/?origem=" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="origem" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">origem</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path"></stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">3645.0</stringProp>
+              <stringProp name="ConstantTimer.delay">1822.5</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 3645 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

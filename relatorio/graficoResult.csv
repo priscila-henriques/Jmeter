@@ -1,0 +1,16 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1614534391573,148,Teleport,200,OK,Thread Group 1-1,text,true,,1857,287,1,1,https://teleport.com.br/0,44,0,18
+1614534391573,44,Teleport-0,301,Moved Permanently,Thread Group 1-1,,true,,447,166,1,1,http://teleport.com.br/0,44,0,18
+1614534391618,103,Teleport-1,200,OK,Thread Group 1-1,text,true,,1410,121,1,1,https://teleport.com.br/0,103,0,59
+1614534391772,157,Teleport,200,OK,Thread Group 1-2,text,true,,1857,287,1,1,https://teleport.com.br/0,39,0,17
+1614534391772,39,Teleport-0,301,Moved Permanently,Thread Group 1-2,,true,,447,166,1,1,http://teleport.com.br/0,39,0,17
+1614534391812,117,Teleport-1,200,OK,Thread Group 1-2,text,true,,1410,121,1,1,https://teleport.com.br/0,117,0,55
+1614534391971,163,Teleport,200,OK,Thread Group 1-3,text,true,,1857,287,1,1,https://teleport.com.br/0,60,0,16
+1614534391971,60,Teleport-0,301,Moved Permanently,Thread Group 1-3,,true,,447,166,1,1,http://teleport.com.br/0,60,0,16
+1614534392032,102,Teleport-1,200,OK,Thread Group 1-3,text,true,,1410,121,1,1,https://teleport.com.br/0,102,0,57
+1614534392175,157,Teleport,200,OK,Thread Group 1-4,text,true,,1857,287,1,1,https://teleport.com.br/0,45,0,18
+1614534392175,45,Teleport-0,301,Moved Permanently,Thread Group 1-4,,true,,447,166,1,1,http://teleport.com.br/0,45,0,18
+1614534392220,112,Teleport-1,200,OK,Thread Group 1-4,text,true,,1410,121,1,1,https://teleport.com.br/0,112,0,60
+1614534392372,206,Teleport,200,OK,Thread Group 1-5,text,true,,1857,287,1,1,https://teleport.com.br/0,48,0,18
+1614534392372,48,Teleport-0,301,Moved Permanently,Thread Group 1-5,,true,,447,166,1,1,http://teleport.com.br/0,48,0,18
+1614534392420,158,Teleport-1,200,OK,Thread Group 1-5,text,true,,1410,121,1,1,https://teleport.com.br/0,158,0,114

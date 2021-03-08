@@ -1,0 +1,15 @@
+1614701833101,1872,HTTP Request,200,OK,Thread Group 1-5,text,true,,287746,260,5,5,https://www.estantevirtual.com.br:443/,321,0,165
+1614701833101,321,HTTP Request-0,301,Moved Permanently,Thread Group 1-5,text,true,,345,126,5,5,http://estantevirtual.com.br/,321,0,165
+1614701833423,1550,HTTP Request-1,200,OK,Thread Group 1-5,text,true,,287401,134,5,5,https://www.estantevirtual.com.br:443/,891,0,210
+1614701832701,2693,HTTP Request,200,OK,Thread Group 1-3,text,true,,287473,260,4,4,https://www.estantevirtual.com.br:443/,419,0,221
+1614701832701,419,HTTP Request-0,301,Moved Permanently,Thread Group 1-3,text,true,,345,126,4,4,http://estantevirtual.com.br/,419,0,221
+1614701833121,2273,HTTP Request-1,200,OK,Thread Group 1-3,text,true,,287128,134,4,4,https://www.estantevirtual.com.br:443/,1609,0,512
+1614701832502,3002,HTTP Request,200,OK,Thread Group 1-2,text,true,,287657,260,3,3,https://www.estantevirtual.com.br:443/,421,0,158
+1614701832502,421,HTTP Request-0,301,Moved Permanently,Thread Group 1-2,text,true,,345,126,3,3,http://estantevirtual.com.br/,421,0,158
+1614701832925,2579,HTTP Request-1,200,OK,Thread Group 1-2,text,true,,287312,134,3,3,https://www.estantevirtual.com.br:443/,1267,0,708
+1614701832376,3203,HTTP Request,200,OK,Thread Group 1-1,text,true,,287795,260,2,2,https://www.estantevirtual.com.br:443/,426,0,222
+1614701832376,428,HTTP Request-0,301,Moved Permanently,Thread Group 1-1,text,true,,345,126,2,2,http://estantevirtual.com.br/,426,0,222
+1614701832807,2772,HTTP Request-1,200,OK,Thread Group 1-1,text,true,,287450,134,2,2,https://www.estantevirtual.com.br:443/,1676,0,826
+1614701832904,2921,HTTP Request,200,OK,Thread Group 1-4,text,true,,287509,260,1,1,https://www.estantevirtual.com.br:443/,318,0,159
+1614701832904,318,HTTP Request-0,301,Moved Permanently,Thread Group 1-4,text,true,,345,126,1,1,http://estantevirtual.com.br/,318,0,159
+1614701833222,2603,HTTP Request-1,200,OK,Thread Group 1-4,text,true,,287164,134,1,1,https://www.estantevirtual.com.br:443/,1663,0,411

@@ -1,0 +1,3 @@
+line 5 column 24 - Warning: Warning: unescaped & which should be written as &amp;
+line 5 column 25 - Warning: Warning: unescaped & which should be written as &amp;
+2 warnings, no errors were found!
